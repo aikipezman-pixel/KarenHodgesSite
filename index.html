@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karen Hodges | Author</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700;900&family=Yellowtail&display=swap" rel="stylesheet">
+</head>
+ <script src="script.js"></script>
+
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">Karen Hodges</a>
+      <p>Texas Roots. Mountain Horizons. Timeless Stories.</p>
+    </div>
+
+  <button
+    class="menu-toggle"
+    aria-label="Toggle navigation"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
+
+    <nav class="main-nav">
+      <a href="#" class="active">Home</a>
+      <a href="#books">Books</a>
+      <a href="#about">About Karen</a>
+      <a href="#contact">Contact</a>
+    
+
+    <div class="header-mark">
+      <span class="texas">★</span>
+      <span class="mountain">▲</span>
+    </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>
+          Librarian.<br>
+          Storyteller.<br>
+          Mountain Lover.
+        </h1>
+
+        <p>
+          From the wide skies of West Texas to the halls of the University of Texas and the mountains of North Carolina, Karen Hodges has spent a lifetime collecting stories. Her books celebrate history, family, faith, and the people who shape our lives.
+        </p>
+
+        <a href="#about" class="btn btn-rust">Meet Karen</a>
+      </div>
+
+      <div class="hero-art">
+        <img src="Assets/UTTowerintheMountains.png" alt="University of Texas tower with mountains behind it" class="hero-main-img">
+        <img src="Assets/Card.png" alt="Vintage Library Card" class="photo-card austin-card">
+        <img src="Assets/WestTexas.png" alt="Vintage Dawson County" class="photo-card mountain-card">
+      </div>
+    </section>
+
+    <section id="books" class="books-section">
+      <div class="section-title">
+        <span></span>
+        <h2>Two Books. Two Sides of the Story.</h2>
+        <span></span>
+      </div>
+
+      <div class="books-grid">
+        <article class="book-card">
+          <img src="Assets/ClockTowerConnection.png" alt="The Clock Tower Connection Cover" class="book-cover">
+
+          <div class="book-copy">
+            <h3>The Clock Tower Connection</h3>
+            <p class="subtitle">A Historical Murder Mystery</p> 
+
+            <p>
+              When tragedy strikes beneath the University of Texas Tower, Patti finds herself drawn into a mystery that refuses to fade with the headlines.  As she searches for answers, she discovers that the truth behind on victim's story may be more dangerous than she ever imagined.
+            </p>
+
+            <a href="#" class="btn btn-green">Learn More</a>
+          </div>
+        </article>
+
+        <div class="center-star" aria-hidden="true">★</div>
+
+        <article class="book-card">
+          <img src="Assets/WhyGrannyCan'tSkip.png" alt="Why Granny Can's Skip Cover" class="book-cover">
+
+          <div class="book-copy">
+            <h3>Why Granny Can't Skip</h3>
+            <p class="subtitle">A Heartfelt Memoir</p>
+
+            <p>
+              From childhood memories and family adventures to the everyday suprises of growing older, Karen Hodges shares stories shaped by faith, love, and gratitude.  With warmth, humor, and honesty, she reminds us that every stage of life carries its own blessings - and its own reasons to smile.
+            </p>
+
+            <a href="#" class="btn btn-green">Learn More</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="lower-panel">
+      <article id="about" class="about-card">
+        <img src="assets/KarenHodges.jpg" alt="Karen Hodges smiling outdoors beneath white flowers">
+
+        <div>
+          <h2>About Karen</h2>
+          <p>
+            Karen Hodges spent much of her life surrounded by books - as a student, librarian, reader, and now author.  A University of Texas alumna and former school librarian, she draws inspiration from the places the has colled home, from West Texas and Austin to the mountains of North Carolina. Her stories blend history, faith, humor, and a deep appreciation for everyday life.
+          </p>
+
+          <a href="#" class="btn btn-rust">Read My Story</a>
+        </div>
+      </article>
+
+      <blockquote>
+        “Facts tell,<br>
+        but stories stay.”
+      </blockquote>
+
+      <section id="contact" class="contact-card">
+        <h2>Let’s Stay in Touch</h2>
+        <p>
+          Join my email list for book news, events, and the occasional story.
+        </p>
+
+        <form>
+          <label for="email" class="sr-only">Email address</label>
+          <input type="email" id="email" placeholder="Your email address">
+          <button class="btn btn-rust" type="submit">Subscribe</button>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>★ 2026 Karen Hodges · All Rights Reserved</p>
+
+    <div class="footer-links">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="mailto:karen@example.com">Email</a>
+    </div>
+  </footer>
+</body>
+</html>

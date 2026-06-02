@@ -1,0 +1,1000 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Lato:wght@400;700;900&family=Yellowtail&display=swap");
+
+:root {
+  --cream: #f3e7d2;
+  --paper: #efe0c4;
+  --ink: #1f2418;
+  --rust: #a84d2c;
+  --green: #3f4a2e;
+  --sage: #c6bea2;
+  --blue: #243857;
+  --line: rgba(88, 65, 39, 0.28);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 5%;
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-family: "Yellowtail", cursive;
+  font-size: clamp(2.6rem, 5vw, 4.5rem);
+  color: var(--rust);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.brand p {
+  margin: 0.2rem 0 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  padding-bottom: 0.35rem;
+}
+
+.main-nav a:hover,
+.main-nav .active {
+  color: var(--rust);
+  border-bottom: 2px solid var(--rust);
+}
+
+.header-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--rust);
+  font-size: 1.7rem;
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  grid-template-columns: 0.85fr 1.35fr;
+  align-items: center;
+  min-height: 520px;
+  padding: 3rem 5%;
+  background:
+    linear-gradient(90deg, rgba(243, 231, 210, 0.98), rgba(243, 231, 210, 0.35)),
+    url("assets/ut-tower.jpg");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.hero-text {
+  max-width: 560px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  margin: 0 0 1.1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 5.3vw, 5.4rem);
+  line-height: 0.95;
+  color: var(--blue);
+}
+
+.hero h1::after {
+  content: "★";
+  display: block;
+  width: 260px;
+  margin-top: 1rem;
+  color: var(--rust);
+  font-size: 1rem;
+  letter-spacing: 1.8rem;
+  border-top: 2px solid var(--rust);
+}
+
+.hero p {
+  max-width: 480px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.45rem;
+  border: 0;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+  font-weight: 900;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.16);
+}
+
+.btn-rust {
+  background: var(--rust);
+}
+
+.btn-green {
+  background: var(--green);
+}
+
+.hero-art {
+  position: relative;
+  min-height: 420px;
+}
+
+.hero-main-img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  opacity: 0.88;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+.photo-card {
+  position: absolute;
+  width: 33%;
+  border: 8px solid #ead8b8;
+  background: #ead8b8;
+  box-shadow: 0 16px 26px rgba(0, 0, 0, 0.28);
+}
+
+.austin-card {
+  right: 8%;
+  top: 35%;
+  transform: rotate(4deg);
+}
+
+.mountain-card {
+  right: -2%;
+  bottom: -5%;
+  transform: rotate(-5deg);
+}
+
+/* Books */
+
+.books-section {
+  padding: 1.4rem 5% 1.8rem;
+  background: rgba(255, 249, 236, 0.7);
+}
+
+.section-title {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+
+.section-title span {
+  height: 1px;
+  background: var(--line);
+}
+
+.section-title h2 {
+  margin: 0;
+  font-family: "Yellowtail", cursive;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  font-weight: 400;
+  color: var(--blue);
+  text-align: center;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.book-card {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.book-cover {
+  width: 190px;
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.3);
+}
+
+.book-copy h3,
+.about-card h2,
+.contact-card h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--rust);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 0.4rem 0 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.82rem;
+  font-weight: 900;
+  color: var(--blue);
+}
+
+.center-star {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  color: var(--rust);
+  font-size: 2rem;
+  border-left: 1px dotted var(--rust);
+}
+
+/* Lower panel */
+
+.lower-panel {
+  display: grid;
+  grid-template-columns: 1.45fr 0.7fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 1.4rem 5% 1.8rem;
+  background:
+    linear-gradient(rgba(198, 190, 162, 0.82), rgba(198, 190, 162, 0.82)),
+    url("assets/mountain-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid var(--line);
+}
+
+.about-card {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 1.7rem;
+  align-items: center;
+}
+
+.about-card img {
+  border: 8px solid #ead8b8;
+  transform: rotate(-4deg);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.24);
+}
+
+blockquote {
+  margin: 0;
+  font-family: "Yellowtail", cursive;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  line-height: 1.15;
+  color: var(--blue);
+  text-align: center;
+}
+
+.contact-card {
+  padding-left: 2.2rem;
+  border-left: 1px dotted rgba(80, 63, 42, 0.55);
+}
+
+.contact-card form {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.contact-card input {
+  width: 100%;
+  padding: 0.82rem;
+  border: 1px solid var(--line);
+  background: #f8efdf;
+  font: inherit;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 5%;
+  background: #1d2a25;
+  color: var(--cream);
+  font-size: 0.78rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-links a {
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+  .site-header {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.1rem;
+  }
+
+  .header-mark {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin: 0 auto;
+  }
+
+  .hero h1::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-art {
+    min-height: 360px;
+  }
+
+  .hero-main-img {
+    height: 360px;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .center-star {
+    display: none;
+  }
+
+  .book-card {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .lower-panel {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-card {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .contact-card {
+    border-left: 0;
+    padding-left: 0;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Smartphone */
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 1rem 6%;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .brand p {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+  }
+
+  .main-nav {
+    gap: 0.7rem;
+  }
+
+  .main-nav a {
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    padding: 2.2rem 6%;
+    background-position: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 15vw, 4rem);
+  }
+
+  .hero h1::after {
+    width: 190px;
+    letter-spacing: 1.1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-art {
+    min-height: auto;
+  }
+
+  .hero-main-img {
+    height: 260px;
+  }
+
+  .photo-card {
+    position: static;
+    width: 82%;
+    margin: 1rem auto 0;
+    transform: none;
+  }
+
+  .section-title {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title span {
+    display: none;
+  }
+
+  .books-section,
+  .lower-panel {
+    padding: 1.6rem 6%;
+  }
+
+  .book-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .book-cover {
+    margin: 0 auto;
+    width: 210px;
+  }
+
+  .book-copy h3,
+  .about-card h2,
+  .contact-card h2 {
+    font-size: 1.7rem;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-card img {
+    max-width: 260px;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  blockquote {
+    font-size: 2.25rem;
+  }
+
+  .contact-card form {
+    flex-direction: column;
+  }
+
+  .contact-card .btn,
+  .contact-card input {
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.menu-toggle {
+  display: none;
+  background: var(--rust);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+//** Bio CSS **//
+
+/* ========================================
+   BIO PAGE
+======================================== */
+
+.bio-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+
+  padding: 4rem 6%;
+  background:
+    linear-gradient(
+      to right,
+      rgba(244,234,214,0.96),
+      rgba(244,234,214,0.82)
+    ),
+    url("../images/blue-ridge-texture.jpg");
+
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.bio-hero__text {
+  max-width: 620px;
+}
+
+.bio-hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.bio-hero__subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  font-style: italic;
+  color: var(--rust);
+  margin-bottom: 2rem;
+}
+
+.bio-hero__text p:last-child {
+  max-width: 520px;
+  font-size: 1.15rem;
+}
+
+.bio-hero__image {
+  width: 100%;
+  max-width: 650px;
+
+  border: 12px solid #efe2c7;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+
+  justify-self: end;
+}
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+.bio-main {
+  display: grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap: 4rem;
+
+  padding: 4rem 6%;
+}
+
+.bio-story {
+  position: relative;
+}
+
+.bio-entry {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.bio-star {
+  color: var(--rust);
+  font-size: 1.3rem;
+  margin-top: .2rem;
+}
+
+.bio-entry h2 {
+  margin-top: 0;
+  margin-bottom: .75rem;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: var(--rust);
+}
+
+.bio-entry p {
+  margin: 0;
+}
+
+.bio-closing {
+  margin-top: 2rem;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  font-style: italic;
+
+  color: var(--green);
+}
+
+/* ========================================
+   WHY I WRITE
+======================================== */
+
+.why-write {
+  padding: 2rem;
+  background: var(--paper);
+
+  border: 1px solid rgba(0,0,0,.08);
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.06);
+
+  margin-bottom: 2rem;
+}
+
+.why-write h2 {
+  text-align: center;
+
+  font-family: "Cormorant Garamond", serif;
+  color: var(--rust);
+
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  font-size: 2.4rem;
+}
+
+.why-write blockquote {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+
+  text-align: center;
+
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+/* ========================================
+   QUICK FACTS
+======================================== */
+
+.quick-facts {
+  padding-top: 1rem;
+}
+
+.quick-facts h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  font-family: "Cormorant Garamond", serif;
+  color: var(--rust);
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.facts-grid > div {
+  text-align: center;
+  padding: 1rem;
+}
+
+.fact-icon {
+  display: block;
+  font-size: 2rem;
+  color: var(--rust);
+
+  margin-bottom: .75rem;
+}
+
+.facts-grid h3 {
+  margin-bottom: .75rem;
+
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .9rem;
+}
+
+.facts-grid p {
+  margin: .3rem 0;
+  font-size: .9rem;
+}
+
+/* ========================================
+   TIMELINE
+======================================== */
+
+.timeline {
+  padding: 2rem 6% 4rem;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+
+  margin-top: 3rem;
+}
+
+.timeline-item {
+  text-align: center;
+  position: relative;
+}
+
+.timeline-item::after {
+  content: "";
+
+  position: absolute;
+
+  top: 35px;
+  left: 100%;
+
+  width: 100%;
+  height: 2px;
+
+  background: rgba(166,79,47,.25);
+}
+
+.timeline-item:last-child::after {
+  display: none;
+}
+
+.timeline-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 1rem;
+
+  border-radius: 50%;
+
+  background: var(--paper);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.8rem;
+  color: var(--rust);
+}
+
+.timeline-item h3 {
+  margin-bottom: .5rem;
+
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   PHOTO STRIP
+======================================== */
+
+.photo-strip {
+  padding: 2rem 6% 4rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+}
+
+.photo-grid figure {
+  margin: 0;
+
+  background: #efe2c7;
+
+  padding: .75rem;
+
+  box-shadow:
+    0 10px 20px rgba(0,0,0,.08);
+
+  transform: rotate(-2deg);
+}
+
+.photo-grid figure:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.photo-grid img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.photo-grid figcaption {
+  text-align: center;
+  margin-top: .75rem;
+
+  font-size: .9rem;
+  font-style: italic;
+}
+
+/* ========================================
+   BIO CTA
+======================================== */
+
+.bio-cta {
+  padding: 5rem 6%;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(244,234,214,.92),
+      rgba(244,234,214,.92)
+    ),
+    url("../images/mountain-silhouette.png");
+
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.bio-cta p {
+  max-width: 800px;
+
+  margin: 0 auto 2rem;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+
+  color: var(--rust);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 950px) {
+
+  .bio-hero,
+  .bio-main {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-hero__image {
+    justify-self: center;
+  }
+
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item::after {
+    display: none;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .bio-hero {
+    padding: 3rem 7%;
+  }
+
+  .bio-main,
+  .timeline,
+  .photo-strip,
+  .bio-cta {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-hero__subtitle {
+    font-size: 1.5rem;
+  }
+
+  .bio-cta p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablet + Mobile */
+
+@media (max-width: 1024px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: var(--paper);
+    padding: 1rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 0.75rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,.08);
+  }
+}
