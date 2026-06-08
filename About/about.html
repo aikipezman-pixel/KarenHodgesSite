@@ -10,31 +10,41 @@
 <body>
 
   <header class="site-header">
-    <div class="logo-block">
-      <a href="index.html" class="site-logo">Karen Hodges</a>
+    <div class="brand">
+      <a href="../index.html" class="logo">Karen Hodges</a>
       <p class="tagline">Stories rooted in Texas. Life in the mountains.</p>
     </div>
 
-    <nav class="main-nav">
-      <a href="../index.html">Home</a>
-      <a href="../books.html">Books</a>
-      <a href="../about.html" class="active">About Karen</a>
-      <a href="../writing.html">Writing</a>
-      <a href="../events.html">Events</a>
-      <a href="../stories.html">Stories</a>
-      <a href="../contact.html">Contact</a>
-    </nav>
 
-    <div class="texas-mark" aria-hidden="true">★</div>
+  <button
+    class="menu-toggle"
+    aria-label="Toggle navigation"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
+
+    <nav class="main-nav">
+      <a href="https://aikipezman-pixel.github.io/KarenHodgesSite/" class="active">Home</a>
+      <a href="#books">Books</a>
+      <a href="#about">About Karen</a>
+      <a href="#contact">Contact</a>
+    
+
+    <div class="header-mark">
+      <span class="texas">★</span>
+      <span class="mountain">▲</span>
+    </div>
+    </nav>
   </header>
 
   <main>
 
     <!-- HERO -->
-    <section class="about-hero">
-      <div class="about-hero-text">
+    <section class="bio-hero">
+      <div class="bio-hero__text">
         <h1>About Karen</h1>
-        <p class="hero-kicker">
+        <p class="bio-hero__subtitle">
           Librarian. Storyteller.<br />
           Texan by birth. Mountain dweller by choice.
         </p>
@@ -47,71 +57,91 @@
         </p>
       </div>
 
-      <div class="about-hero-image">
-        <img src="images/karen-dogwood-portrait.jpg" alt="Karen Hodges smiling in front of white dogwood blossoms" />
-      </div>
+      <img class="bio-hero__image" src="../Assets/KarenHodges.jpg" alt="Karen Hodges smiling in front of white dogwood blossoms" />
     </section>
 
     <!-- BIO MAIN -->
-    <section class="about-main">
+    <section class="bio-main">
 
-      <div class="bio-column">
+      <div class="bio-story">
 
-        <article class="bio-section">
-          <h2>West Texas Beginnings</h2>
-          <p>
-            Karen grew up in West Texas, where wide skies, small towns,
-            windmills, bluebonnets, and family stories helped shape the way
-            she sees the world. Long before she became a writer, she was
-            learning to notice the details that make ordinary lives memorable.
-          </p>
-        </article>
+        <div class="bio-entry">
+          <div class="bio-star">★</div>
+          <div>
+            <h2>West Texas Beginnings</h2>
+            <p>
+              Karen grew up in West Texas, where wide skies, small towns,
+              windmills, bluebonnets, and family stories helped shape the way
+              she sees the world. Long before she became a writer, she was
+              learning to notice the details that make ordinary lives memorable.
+            </p>
+          </div>
+        </div>
 
-        <article class="bio-section">
-          <h2>Austin Years</h2>
-          <p>
-            Karen’s connection to Austin spans more than half a century.
-            As a student at the University of Texas in the 1960s, she
-            experienced the city during one of the most defining chapters
-            in its history.
-          </p>
-          <p>
-            She was in the UT Tower on August 1, 1966, the day of the
-            tragic Tower shooting. That firsthand connection to the campus,
-            the era, and the emotional weight of the event gives special
-            depth to her historical mystery, <em>Clock Tower Connection</em>.
-          </p>
-          <p>
-            Though the novel is fiction, its atmosphere grows from Karen’s
-            lived memory of Austin, the University, and a moment in Texas
-            history that was never forgotten.
-          </p>
-        </article>
+        <div class="bio-entry">
+          <div class="bio-star">★</div>
+          <div>
+            <h2>Austin Years</h2>
+            <p>
+              Karen's connection to Austin spans more than half a century.
+              As a student at the University of Texas in the 1960s, she
+              experienced the city during one of the most defining chapters
+              in its history.
+            </p>
+            <br>
+            <p>
+              She was in the UT Tower on August 1, 1966, the day of the
+              tragic Tower shooting. That firsthand connection to the campus,
+              the era, and the emotional weight of the event gives special
+              depth to her historical mystery, <em>Clock Tower Connection</em>.
+            </p>
+            <br />
+            <p>
+              She was in the UT Tower on August 1, 1966, the day of the
+              tragic Tower shooting. That firsthand connection to the campus,
+              the era, and the emotional weight of the event gives special
+              depth to her historical mystery, <em>Clock Tower Connection</em>.
+            </p>
+            <br />
+            <p>
+              Though the novel is fiction, its atmosphere grows from Karen's
+              lived memory of Austin, the University, and a moment in Texas
+              history that was never forgotten.
+            </p>
+          </div>
+        </div>
 
-        <article class="bio-section">
-          <h2>A Life Among Books</h2>
-          <p>
-            Karen spent much of her professional life as a school librarian,
-            surrounded by books, students, and curious minds. She helped
-            young readers discover stories, ask questions, and see reading
-            as a doorway into larger worlds.
-          </p>
-          <p>
-            Librarian by profession. Storyteller by nature.
-          </p>
-        </article>
+        <div class="bio-entry">
+          <div class="bio-star">★</div>
+          <div>
+            <h2>A Life Among Books</h2>
+            <p>
+              Karen spent much of her professional life as a school librarian,
+              surrounded by books, students, and curious minds. She helped
+              young readers discover stories, ask questions, and see reading
+              as a doorway into larger worlds.
+            </p>
+            <br />
+            <p>
+              Librarian by profession. Storyteller by nature.
+            </p>
+          </div>
+        </div>
 
-        <article class="bio-section">
-          <h2>Life in the Mountains</h2>
-          <p>
-            Today Karen lives in the mountains of western North Carolina.
-            The ridges, trails, wildflowers, wildlife, and changing seasons
-            have become part of her later-life story, adding a new landscape
-            to a life still deeply rooted in Texas.
-          </p>
-        </article>
+        <div class="bio-entry">
+          <div class="bio-star">★</div>
+          <div>
+            <h2>Life in the Mountains</h2>
+            <p>
+              Today Karen lives in the mountains of western North Carolina.
+              The ridges, trails, wildflowers, wildlife, and changing seasons
+              have become part of her later-life story, adding a new landscape
+              to a life still deeply rooted in Texas.
+            </p>
+          </div>
+        </div>
 
-        <p class="closing-bio-note">
+        <p class="bio-closing">
           Whether writing fiction or memoir, Karen remains drawn to the
           stories people carry with them — the memories, places, and moments
           that stay long after the page is turned.
@@ -121,16 +151,16 @@
 
       <aside class="about-sidebar">
 
-        <section class="why-write-card">
+        <section class="why-write">
           <h2>Why I Write</h2>
           <blockquote>
             <p>
-              “I’ve always believed stories help us understand one another.
+              "I've always believed stories help us understand one another.
               Some stories entertain. Some preserve memories. Some help us
-              make sense of where we’ve been. Whether I’m writing about
+              make sense of where we've been. Whether I'm writing about
               Austin in the 1960s or sharing memories from my own life,
-              I’m really exploring the people, places, and moments that
-              stay with us long after the page is turned.”
+              I'm really exploring the people, places, and moments that
+              stay with us long after the page is turned."
             </p>
           </blockquote>
         </section>
@@ -177,7 +207,7 @@
     <section class="stories-stay">
       <h2>Stories That Stay</h2>
       <p>
-        Karen’s books may take different forms — a historical mystery set
+        Karen's books may take different forms — a historical mystery set
         in 1960s Austin and a warm memoir about family, faith, aging, and
         gratitude — but both grow from the same belief: stories help us
         remember what matters.
@@ -191,7 +221,7 @@
     </section>
 
     <!-- TIMELINE -->
-    <section class="life-timeline">
+    <section class="timeline">
       <h2>A Life in Stories</h2>
 
       <div class="timeline-grid">
@@ -230,10 +260,10 @@
     </section>
 
     <!-- PHOTO GALLERY -->
-    <section class="photo-gallery">
+    <section class="photo-strip">
       <h2>A Few Photos Along the Way</h2>
 
-      <div class="gallery-grid">
+      <div class="photo-grid">
 
         <figure>
           <img src="images/karen-childhood.jpg" alt="Karen Hodges as a child in Texas" />
@@ -259,18 +289,18 @@
     </section>
 
     <!-- CTA -->
-    <section class="about-cta">
+    <section class="bio-cta">
       <p>
-        I’ve always loved a good story — whether it’s found in a library,
+        I've always loved a good story — whether it's found in a library,
         shared across a kitchen table, or discovered along a mountain trail.
       </p>
-      <a href="books.html" class="button">Explore My Books</a>
+      <a href="../books.html" class="btn btn-rust">Explore My Books</a>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <p>★ 2024 Karen Hodges · All Rights Reserved</p>
+    <p>★ 2026 Karen Hodges · All Rights Reserved</p>
     <div class="footer-links">
       <a href="#" aria-label="Facebook">Facebook</a>
       <a href="#" aria-label="Instagram">Instagram</a>
