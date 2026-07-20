@@ -97,7 +97,7 @@ a {
   padding: 3rem 5%;
   background:
     linear-gradient(90deg, rgba(243, 231, 210, 0.98), rgba(243, 231, 210, 0.35)),
-    url("assets/ut-tower.jpg");
+    url("../Assets/UTTowerintheMountains.png");
   background-size: cover;
   background-position: center;
   border-bottom: 1px solid var(--line);
@@ -158,6 +158,19 @@ a {
   background: var(--green);
 }
 
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus-visible,
+.main-nav a:focus-visible,
+.footer-links a:focus-visible {
+  outline: 3px solid rgba(36, 56, 87, 0.35);
+  outline-offset: 3px;
+}
+
 .hero-art {
   position: relative;
   min-height: 420px;
@@ -189,6 +202,60 @@ a {
   right: -2%;
   bottom: -5%;
   transform: rotate(-5deg);
+}
+
+
+/* Storytelling background strip */
+
+.storytelling-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 5%;
+  background: rgba(255, 249, 236, 0.82);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.storytelling-intro {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.storytelling-intro p {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.18rem;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.storytelling-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  color: var(--blue);
+}
+
+.storytelling-icon svg {
+  width: 100%;
+  height: auto;
+}
+
+.storytelling-quote {
+  margin: 0;
+  padding-left: 2rem;
+  border-left: 1px dotted rgba(168, 77, 44, 0.55);
+  font-family: "Yellowtail", cursive;
+  font-size: clamp(1.8rem, 3vw, 2.65rem);
+  line-height: 1.1;
+  color: var(--blue);
+  text-align: center;
 }
 
 /* Books */
@@ -272,13 +339,13 @@ a {
 
 .lower-panel {
   display: grid;
-  grid-template-columns: 1.45fr 0.7fr 1fr;
+  grid-template-columns: minmax(0, 1.45fr) minmax(170px, 0.52fr) minmax(280px, 0.9fr);
   gap: 2.5rem;
   align-items: center;
-  padding: 1.4rem 5% 1.8rem;
+  padding: 1.8rem 5% 2rem;
   background:
     linear-gradient(rgba(198, 190, 162, 0.82), rgba(198, 190, 162, 0.82)),
-    url(../Assets/blue-ridge-texture.png);
+    url("../Assets/blue-ridge-texture.png");
   background-size: cover;
   background-position: center;
   border-top: 1px solid var(--line);
@@ -297,13 +364,35 @@ a {
   box-shadow: 0 14px 24px rgba(0, 0, 0, 0.24);
 }
 
-blockquote {
-  margin: 0;
-  font-family: "Yellowtail", cursive;
-  font-size: clamp(2.1rem, 4vw, 3rem);
-  line-height: 1.15;
-  color: var(--blue);
-  text-align: center;
+/* Decorative bookmark between About and Contact */
+
+.bookmark-feature {
+  position: relative;
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  margin: -0.7rem 0;
+  padding: 0.35rem;
+}
+
+.bookmark-feature::before {
+  content: "";
+  position: absolute;
+  inset: 7% 12%;
+  border-radius: 10px;
+  background: rgba(243, 231, 210, 0.42);
+  box-shadow: 0 16px 30px rgba(46, 35, 24, 0.14);
+  transform: rotate(1.5deg);
+}
+
+.bookmark-feature img {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 210px);
+  max-height: 440px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 18px rgba(0, 0, 0, 0.2));
+  transform: rotate(-1.5deg);
 }
 
 .contact-card {
@@ -312,7 +401,8 @@ blockquote {
 }
 
 .contact-card form {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 0.7rem;
   margin-top: 1rem;
 }
@@ -474,6 +564,24 @@ blockquote {
     margin: 0 auto;
   }
 
+  .storytelling-strip {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .storytelling-intro {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .storytelling-quote {
+    padding: 1rem 0 0;
+    border-top: 1px dotted rgba(168, 77, 44, 0.55);
+    border-left: 0;
+  }
+
   .lower-panel {
     grid-template-columns: 1fr;
     text-align: center;
@@ -483,6 +591,16 @@ blockquote {
     max-width: 760px;
     margin: 0 auto;
     text-align: left;
+  }
+
+  .bookmark-feature {
+    width: min(100%, 280px);
+    margin: 0 auto;
+  }
+
+  .bookmark-feature img {
+    width: min(100%, 230px);
+    max-height: 500px;
   }
 
   .contact-card {
@@ -563,6 +681,23 @@ blockquote {
     display: none;
   }
 
+  .storytelling-strip {
+    padding: 1.2rem 6%;
+  }
+
+  .storytelling-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .storytelling-icon {
+    margin: 0 auto;
+  }
+
+  .storytelling-intro p {
+    font-size: 1.08rem;
+  }
+
   .books-section,
   .lower-panel {
     padding: 1.6rem 6%;
@@ -596,8 +731,9 @@ blockquote {
     transform: none;
   }
 
-  blockquote {
-    font-size: 2.25rem;
+  .bookmark-feature img {
+    width: min(100%, 205px);
+    max-height: 430px;
   }
 
   .contact-card form {
@@ -826,9 +962,6 @@ blockquote {
    TIMELINE
 ======================================== */
 
-.timeline {
-  padding: 2rem 6% 4rem;
-}
 
 .timeline-grid {
   display: grid;
@@ -2180,5 +2313,981 @@ blockquote {
 
   .notebook-grid--stacked .notebook-card {
     min-height: auto;
+  }
+}
+
+/* ========================================
+   ABOUT PAGE REFINEMENTS
+   Storytelling history, archival materials,
+   Autumn pull quote, six-step timeline,
+   and expanded photo strip.
+======================================== */
+
+/* Give biography paragraphs natural spacing without requiring <br> tags. */
+.bio-entry p + p {
+  margin-top: 1rem;
+}
+
+.bio-emphasis {
+  margin-top: 1rem !important;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--green);
+}
+
+/* Featured storytelling chapter */
+.bio-entry--featured {
+  padding: 1.35rem 1.5rem 1.45rem;
+  border: 1px solid rgba(88, 65, 39, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(
+      rgba(239, 224, 196, 0.92),
+      rgba(239, 224, 196, 0.92)
+    ),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 22px rgba(65, 45, 28, 0.08);
+}
+
+.storytelling-details {
+  margin: 1.15rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.storytelling-details li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.25rem;
+}
+
+.storytelling-details li::marker {
+  color: var(--rust);
+}
+
+.storytelling-details strong {
+  color: var(--green);
+}
+
+/* Sidebar archive section */
+.storytelling-memories {
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.storytelling-memories > h2 {
+  margin: 0 0 1.4rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--rust);
+  text-align: center;
+}
+
+.archive-card {
+  margin: 0;
+  padding: 0 0 1.8rem;
+}
+
+.archive-card + .archive-card {
+  padding-top: 1.8rem;
+  border-top: 1px dotted rgba(168, 77, 44, 0.45);
+}
+
+.archive-card img {
+  width: 100%;
+  max-height: 430px;
+  object-fit: contain;
+  padding: 0.55rem;
+  background: #ead8b8;
+  border: 1px solid rgba(88, 65, 39, 0.18);
+  box-shadow: 0 10px 20px rgba(65, 45, 28, 0.12);
+}
+
+.archive-card:first-of-type img {
+  transform: rotate(-1deg);
+}
+
+.archive-card:nth-of-type(2) img {
+  transform: rotate(1deg);
+}
+
+.archive-card figcaption {
+  margin-top: 0.9rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.archive-card figcaption strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--green);
+  font-size: 1.15rem;
+}
+
+.archive-card .text-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+}
+
+/* Autumn excerpt */
+.still-changing {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
+  gap: 1.25rem 1.5rem;
+  align-items: center;
+  margin: 0.5rem 0 2rem;
+  padding: 1.4rem 1.5rem;
+  background:
+    linear-gradient(rgba(239, 224, 196, 0.95), rgba(239, 224, 196, 0.95)),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(88, 65, 39, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 9px 18px rgba(65, 45, 28, 0.07);
+}
+
+.still-changing h2 {
+  margin: 0 0 0.35rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.9rem;
+  color: var(--rust);
+}
+
+.still-changing__intro {
+  margin: 0;
+}
+
+.still-changing blockquote {
+  position: relative;
+  margin: 0;
+  padding: 1rem 1.15rem 1rem 1.5rem;
+  background: rgba(255, 249, 236, 0.55);
+  border-left: 3px solid var(--rust);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--green);
+}
+
+.still-changing blockquote p {
+  margin: 0;
+}
+
+.still-changing .text-link {
+  grid-column: 1 / -1;
+  width: fit-content;
+}
+
+/* Keep placeholder visually intentional until Karen supplies her quote. */
+.why-write blockquote p {
+  margin: 0;
+}
+
+.why-write blockquote p:only-child {
+  color: rgba(31, 36, 24, 0.78);
+}
+
+/* Six-part timeline */
+.timeline-grid--six {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.timeline-grid--six .timeline-item::after {
+  width: 70%;
+  left: 85%;
+}
+
+.timeline-grid--six .timeline-item h3 {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.timeline-grid--six .timeline-item p {
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+/* Five-image photo strip */
+.photo-grid--five {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.photo-grid--five figure {
+  min-width: 0;
+}
+
+.photo-grid--five img {
+  width: 100%;
+}
+
+/* Better section-title treatment on About page */
+.timeline > h2,
+.photo-strip > h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  color: var(--green);
+  text-align: center;
+}
+
+/* About-page tablet */
+@media (max-width: 1100px) {
+  .timeline-grid--six {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 2rem;
+  }
+
+  .timeline-grid--six .timeline-item::after {
+    display: none;
+  }
+
+  .photo-grid--five {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 950px) {
+  .about-sidebar {
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .storytelling-memories {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .storytelling-memories > h2 {
+    grid-column: 1 / -1;
+  }
+
+  .archive-card + .archive-card {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .still-changing {
+    grid-template-columns: 1fr;
+  }
+
+  .still-changing .text-link {
+    grid-column: auto;
+  }
+}
+
+/* About-page mobile */
+@media (max-width: 700px) {
+  .bio-entry--featured {
+    padding: 1.1rem;
+  }
+
+  .storytelling-details {
+    padding-left: 1.05rem;
+  }
+
+  .storytelling-memories {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-grid--six,
+  .photo-grid--five {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-card img {
+    max-height: none;
+  }
+
+  .still-changing {
+    padding: 1.15rem;
+  }
+
+  .still-changing blockquote {
+    font-size: 1.12rem;
+  }
+}
+
+
+/* ========================================
+   BOOKS & WRITING PAGE — CONTENT EXPANSION
+   Supports:
+   - a third Published Writing card for “Autumn”
+   - archival imagery within article/detail pages
+   - a bookmark-poem accent
+   - a third Favorite Passage feature for “The Fishing Trip”
+   - browser-readable article pages
+======================================== */
+
+/* Three-item Published Writing layout */
+.writing-column--published .essay-grid--compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.writing-column--published .essay-grid--compact .essay-card:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+.writing-column--published .essay-grid--compact .essay-card:nth-child(3) > a {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1.22fr);
+  align-items: stretch;
+}
+
+.writing-column--published .essay-grid--compact .essay-card:nth-child(3) img {
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  min-height: 250px;
+  margin: 0.5rem;
+  aspect-ratio: auto;
+}
+
+.writing-column--published .essay-grid--compact .essay-card:nth-child(3) .essay-card__body {
+  justify-content: center;
+  text-align: left;
+  padding: 1.4rem 1.6rem;
+}
+
+.writing-column--published .essay-grid--compact .essay-card:nth-child(3) .text-link {
+  margin-top: 0.2rem;
+}
+
+/* Optional content label for essays, poems, stories, etc. */
+.writing-type {
+  display: inline-block;
+  margin-bottom: 0.55rem;
+  color: var(--rust);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+/* Bookmark poem accent */
+.bookmark-poem-feature {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.46fr) minmax(0, 1.54fr);
+  gap: 1.8rem;
+  align-items: center;
+  margin: 0 5% 2.4rem;
+  padding: 1.4rem 1.7rem;
+  background:
+    linear-gradient(rgba(255, 249, 236, 0.93), rgba(255, 249, 236, 0.93)),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(88, 65, 39, 0.2);
+  box-shadow: 0 10px 22px rgba(65, 45, 28, 0.09);
+}
+
+.bookmark-poem-feature__image {
+  width: min(100%, 190px);
+  margin: 0 auto;
+  padding: 0.45rem;
+  background: #ead8b8;
+  border: 1px solid rgba(88, 65, 39, 0.18);
+  box-shadow: 0 12px 20px rgba(65, 45, 28, 0.14);
+  transform: rotate(-1.5deg);
+}
+
+.bookmark-poem-feature__copy h2 {
+  margin: 0 0 0.55rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  line-height: 1;
+  color: var(--green);
+}
+
+.bookmark-poem-feature__copy p {
+  max-width: 700px;
+  margin: 0 0 0.9rem;
+}
+
+.bookmark-poem-feature__excerpt {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--rust);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.28rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: var(--green);
+}
+
+/* Favorite Passages: two book excerpts plus a full-width Fishing Trip feature */
+.passage-grid--expanded {
+  grid-template-columns: 1fr minmax(180px, 0.48fr) 1fr;
+}
+
+.passage-card--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1.58fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.passage-card--featured .passage-card__image {
+  min-height: 220px;
+  height: 100%;
+  padding: 0.5rem;
+  background: #ead8b8;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.14);
+  transform: rotate(-1deg);
+}
+
+.passage-card--featured .passage-card__image img {
+  width: 100%;
+  height: 100%;
+  min-height: 210px;
+  object-fit: cover;
+  filter: sepia(0.2) saturate(0.8);
+}
+
+.passage-card--featured h2 {
+  margin-bottom: 0.4rem;
+}
+
+.passage-card--featured .passage-kicker {
+  margin: 0 0 0.8rem;
+  color: var(--rust);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Browser-readable writing pages */
+.reading-page {
+  background:
+    linear-gradient(rgba(243, 231, 210, 0.96), rgba(243, 231, 210, 0.96)),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: auto, 900px auto;
+}
+
+.reading-hero {
+  padding: 3.4rem 7% 2.8rem;
+  text-align: center;
+  background: rgba(255, 249, 236, 0.74);
+  border-bottom: 1px solid var(--line);
+}
+
+.reading-hero .eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--rust);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.reading-hero h1 {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.98;
+  color: var(--green);
+}
+
+.reading-hero__dek {
+  max-width: 720px;
+  margin: 1rem auto 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.28rem;
+  font-style: italic;
+  color: var(--rust);
+}
+
+.reading-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.32fr);
+  gap: 3rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 3.2rem 6% 4rem;
+}
+
+.reading-article {
+  min-width: 0;
+  padding: clamp(1.5rem, 3vw, 2.6rem);
+  background: rgba(255, 249, 236, 0.78);
+  border: 1px solid rgba(88, 65, 39, 0.17);
+  box-shadow: 0 12px 28px rgba(65, 45, 28, 0.08);
+}
+
+.reading-article p,
+.reading-article li {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+
+.reading-article p:first-of-type::first-letter {
+  float: left;
+  margin: 0.1rem 0.12rem 0 0;
+  color: var(--rust);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 0.8;
+}
+
+.reading-article h2,
+.reading-article h3 {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--green);
+}
+
+.reading-article blockquote {
+  margin: 2rem 0;
+  padding: 1.15rem 1.35rem;
+  background: var(--paper);
+  border-left: 4px solid var(--rust);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--green);
+}
+
+.reading-sidebar {
+  min-width: 0;
+}
+
+.reading-sidebar__card {
+  position: sticky;
+  top: 1.5rem;
+  padding: 1.3rem;
+  background: var(--paper);
+  border: 1px solid rgba(88, 65, 39, 0.18);
+  box-shadow: 0 10px 22px rgba(65, 45, 28, 0.08);
+}
+
+.reading-sidebar__card h2 {
+  margin: 0 0 0.7rem;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--rust);
+}
+
+/* Historical / archival figures used in Crash at Crush and future articles */
+.archival-figure {
+  margin: 2rem 0;
+  padding: 0.65rem;
+  background: #ead8b8;
+  border: 1px solid rgba(88, 65, 39, 0.18);
+  box-shadow: 0 12px 24px rgba(65, 45, 28, 0.12);
+}
+
+.archival-figure img {
+  width: 100%;
+  max-height: 620px;
+  object-fit: contain;
+  filter: sepia(0.14) contrast(1.02);
+}
+
+.archival-figure figcaption {
+  margin-top: 0.65rem;
+  padding: 0 0.35rem 0.15rem;
+  font-family: "Lato", sans-serif;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: rgba(31, 36, 24, 0.8);
+}
+
+.archival-figure figcaption cite {
+  font-style: italic;
+}
+
+/* Reading-page navigation */
+.reading-back-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  color: var(--rust);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.reading-back-link:hover,
+.reading-back-link:focus-visible {
+  text-decoration: underline;
+}
+
+/* Expanded content: tablet */
+@media (max-width: 1000px) {
+  .writing-column--published .essay-grid--compact .essay-card:nth-child(3) > a,
+  .passage-card--featured,
+  .reading-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-column--published .essay-grid--compact .essay-card:nth-child(3) .essay-card__body {
+    text-align: center;
+  }
+
+  .bookmark-poem-feature {
+    grid-template-columns: minmax(140px, 0.4fr) minmax(0, 1.6fr);
+  }
+
+  .reading-sidebar__card {
+    position: static;
+  }
+}
+
+/* Expanded content: mobile */
+@media (max-width: 700px) {
+  .writing-column--published .essay-grid--compact .essay-card:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .writing-column--published .essay-grid--compact .essay-card:nth-child(3) > a {
+    display: flex;
+  }
+
+  .writing-column--published .essay-grid--compact .essay-card:nth-child(3) img {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .bookmark-poem-feature {
+    grid-template-columns: 1fr;
+    margin-left: 6%;
+    margin-right: 6%;
+    padding: 1.2rem;
+    text-align: center;
+  }
+
+  .bookmark-poem-feature__excerpt {
+    padding-left: 0;
+    border-top: 2px solid var(--rust);
+    border-left: 0;
+    padding-top: 1rem;
+  }
+
+  .passage-card--featured {
+    padding: 1.2rem;
+  }
+
+  .passage-card--featured .passage-card__image {
+    transform: none;
+  }
+
+  .reading-hero {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .reading-layout {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .reading-article {
+    padding: 1.25rem;
+  }
+
+  .reading-article p,
+  .reading-article li {
+    font-size: 1.08rem;
+  }
+}
+
+/* ========================================
+   BOOKS & WRITING PAGE — MARKUP ALIGNMENT FIXES
+   Matches writing(3).html.
+======================================== */
+
+/* Published Writing: two standard cards, with Autumn spanning below. */
+.writing-column--published .essay-grid--published {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.writing-column--published .essay-grid--published .essay-card {
+  display: flex;
+  height: 100%;
+}
+
+.writing-column--published .essay-grid--published .essay-card > a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.writing-column--published .essay-grid--published .essay-card img {
+  aspect-ratio: 16 / 10;
+}
+
+.writing-column--published .essay-grid--published .essay-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0.8rem 1rem 1.1rem;
+}
+
+.writing-column--published .essay-grid--published .essay-card h4 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.55rem;
+  line-height: 1.08;
+  color: var(--ink);
+}
+
+.writing-column--published .essay-grid--published .essay-card p {
+  margin: 0.75rem 0 1rem;
+}
+
+.writing-column--published .essay-grid--published .essay-card .text-link {
+  margin-top: auto;
+}
+
+.writing-column--published .essay-grid--published .essay-card--poem {
+  grid-column: 1 / -1;
+}
+
+.writing-column--published .essay-grid--published .essay-card--poem > a {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1.22fr);
+  align-items: stretch;
+}
+
+.writing-column--published .essay-grid--published .essay-card--poem img {
+  width: calc(100% - 1rem);
+  height: calc(100% - 1rem);
+  min-height: 240px;
+  margin: 0.5rem;
+  aspect-ratio: auto;
+}
+
+.writing-column--published .essay-grid--published .essay-card--poem .essay-card__body {
+  justify-content: center;
+  text-align: left;
+  padding: 1.35rem 1.55rem;
+}
+
+.essay-card__type {
+  margin: 0 0 0.45rem !important;
+  color: var(--rust);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.section-action--left {
+  text-align: left;
+}
+
+/* Behind the Stories: contain archival images and keep cards balanced. */
+.notebook-card--with-image {
+  overflow: hidden;
+  padding: 0.75rem;
+}
+
+.notebook-card--with-image > img {
+  width: 100%;
+  height: 190px;
+  margin: 0 0 0.8rem;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(88, 65, 39, 0.18);
+  filter: sepia(0.16) saturate(0.82);
+}
+
+.notebook-card--with-image .notebook-card__content {
+  padding: 0.3rem 0.55rem 0.55rem;
+}
+
+.notebook-card--with-image .notebook-card__content h4 {
+  margin-top: 0;
+}
+
+/* Bookmark poem: heading across the top, contained image and copy below. */
+.bookmark-poem {
+  display: grid;
+  grid-template-columns: minmax(220px, 340px) minmax(0, 1fr);
+  gap: 1.4rem 2.25rem;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2.4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background:
+    linear-gradient(rgba(255, 249, 236, 0.92), rgba(255, 249, 236, 0.92)),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.bookmark-poem__heading {
+  grid-column: 1 / -1;
+}
+
+.bookmark-poem__heading .eyebrow {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.bookmark-poem > img {
+  width: 100%;
+  max-width: 320px;
+  max-height: 470px;
+  margin: 0 auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 18px rgba(65, 45, 28, 0.17));
+}
+
+.bookmark-poem__copy {
+  max-width: 620px;
+}
+
+.bookmark-poem__copy h2 {
+  margin: 0 0 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.05;
+  color: var(--rust);
+}
+
+/* Favorite passages: three balanced cards instead of the old photo-center grid. */
+.passage-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.passage-grid--three .passage-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.passage-grid--three .passage-card > img {
+  width: 100%;
+  height: 205px;
+  margin: 0 0 1rem;
+  object-fit: cover;
+  filter: sepia(0.28) saturate(0.78);
+}
+
+.passage-grid--three .passage-card > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.passage-grid--three .passage-card blockquote {
+  flex: 1;
+}
+
+.passage-card__badge {
+  position: absolute;
+  z-index: 2;
+  top: 0.85rem;
+  right: 0.85rem;
+  padding: 0.32rem 0.55rem;
+  border-radius: 2px;
+  background: var(--rust);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+  .bookmark-poem {
+    grid-template-columns: minmax(190px, 280px) minmax(0, 1fr);
+  }
+
+  .passage-grid--three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .passage-grid--three .passage-card--fishing {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+    gap: 1.4rem;
+  }
+
+  .passage-grid--three .passage-card--fishing > img {
+    height: 100%;
+    min-height: 260px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .writing-column--published .essay-grid--published,
+  .passage-grid--three {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-column--published .essay-grid--published .essay-card--poem {
+    grid-column: auto;
+  }
+
+  .writing-column--published .essay-grid--published .essay-card--poem > a {
+    display: flex;
+  }
+
+  .writing-column--published .essay-grid--published .essay-card--poem img {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .section-action--left {
+    text-align: center;
+  }
+
+  .notebook-card--with-image > img {
+    height: auto;
+    max-height: 260px;
+  }
+
+  .bookmark-poem {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .bookmark-poem__heading,
+  .bookmark-poem > img,
+  .bookmark-poem__copy {
+    grid-column: auto;
+  }
+
+  .bookmark-poem__copy {
+    margin: 0 auto;
+  }
+
+  .passage-grid--three .passage-card--fishing {
+    grid-column: auto;
+    display: flex;
+  }
+
+  .passage-grid--three .passage-card--fishing > img {
+    height: 205px;
+    min-height: 0;
+    margin-bottom: 1rem;
   }
 }

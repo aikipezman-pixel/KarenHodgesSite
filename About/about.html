@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Learn about Karen Hodges—West Texas native, University of Texas alumna, school librarian, community storyteller, and author."
+  />
   <title>About Karen | Karen Hodges</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
@@ -15,26 +19,29 @@
       <p class="tagline">Stories rooted in Texas. Life in the mountains.</p>
     </div>
 
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+    >
+      ☰
+    </button>
 
-  <button
-    class="menu-toggle"
-    aria-label="Toggle navigation"
-    aria-expanded="false"
-  >
-    ☰
-  </button>
+    <nav class="main-nav" id="primary-navigation" aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../books/">Books</a>
+      <a href="./" class="active" aria-current="page">About Karen</a>
+      <a href="../writing/">Writing</a>
+      <a href="../events/">Events</a>
+      <a href="../stories/">Stories</a>
+      <a href="../contact/">Contact</a>
 
-    <nav class="main-nav">
-      <a href="https://aikipezman-pixel.github.io/KarenHodgesSite/" class="active">Home</a>
-      <a href="#books">Books</a>
-      <a href="#about">About Karen</a>
-      <a href="#contact">Contact</a>
-    
-
-    <div class="header-mark">
-      <span class="texas">★</span>
-      <span class="mountain">▲</span>
-    </div>
+      <div class="header-mark" aria-hidden="true">
+        <span class="texas">★</span>
+        <span class="mountain">▲</span>
+      </div>
     </nav>
   </header>
 
@@ -48,7 +55,7 @@
           Librarian. Storyteller.<br />
           Texan by birth. Mountain dweller by choice.
         </p>
-        <div class="small-rule"></div>
+        <div class="small-rule" aria-hidden="true"></div>
         <p>
           From the wide skies of West Texas and the Austin of another era
           to the Blue Ridge Mountains of North Carolina, Karen Hodges has
@@ -57,16 +64,20 @@
         </p>
       </div>
 
-      <img class="bio-hero__image" src="../Assets/KarenHodges.jpg" alt="Karen Hodges smiling in front of white dogwood blossoms" />
+      <img
+        class="bio-hero__image"
+        src="../Assets/KarenHodges.jpg"
+        alt="Karen Hodges smiling in front of white dogwood blossoms"
+      />
     </section>
 
-    <!-- BIO MAIN -->
+    <!-- BIOGRAPHY AND STORYTELLING ARCHIVE -->
     <section class="bio-main">
 
       <div class="bio-story">
 
-        <div class="bio-entry">
-          <div class="bio-star">★</div>
+        <article class="bio-entry">
+          <div class="bio-star" aria-hidden="true">★</div>
           <div>
             <h2>West Texas Beginnings</h2>
             <p>
@@ -76,10 +87,10 @@
               learning to notice the details that make ordinary lives memorable.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div class="bio-entry">
-          <div class="bio-star">★</div>
+        <article class="bio-entry">
+          <div class="bio-star" aria-hidden="true">★</div>
           <div>
             <h2>Austin Years</h2>
             <p>
@@ -88,24 +99,22 @@
               experienced the city during one of the most defining chapters
               in its history.
             </p>
-            <br>
             <p>
               She was in the UT Tower on August 1, 1966, the day of the
               tragic Tower shooting. That firsthand connection to the campus,
               the era, and the emotional weight of the event gives special
               depth to her historical mystery, <em>Clock Tower Connection</em>.
             </p>
-            <br />
             <p>
               Though the novel is fiction, its atmosphere grows from Karen's
               lived memory of Austin, the University, and a moment in Texas
               history that was never forgotten.
             </p>
           </div>
-        </div>
+        </article>
 
-        <div class="bio-entry">
-          <div class="bio-star">★</div>
+        <article class="bio-entry">
+          <div class="bio-star" aria-hidden="true">★</div>
           <div>
             <h2>A Life Among Books</h2>
             <p>
@@ -114,15 +123,59 @@
               young readers discover stories, ask questions, and see reading
               as a doorway into larger worlds.
             </p>
-            <br />
-            <p>
+            <p class="bio-emphasis">
               Librarian by profession. Storyteller by nature.
             </p>
           </div>
-        </div>
+        </article>
+        <article class="bio-entry bio-entry--featured">
+          <div class="bio-star" aria-hidden="true">★</div>
+          <div>
+            <h2>A Life in Storytelling</h2>
+            <p>
+              Karen's life as a storyteller began long before she published
+              her first book. In schools, libraries, camps, gardens, and
+              community spaces, she invited children to become part of the
+              story rather than simply listen from the sidelines.
+            </p>
 
-        <div class="bio-entry">
-          <div class="bio-star">★</div>
+            <ul class="storytelling-details">
+              <li>
+                <strong>Storytelling in schools:</strong>
+                Karen used music, hand instruments, clapping, movement, and
+                student participation to bring stories to life.
+              </li>
+              <li>
+                <strong>Participatory stories:</strong>
+                Children repeated refrains, called out answers, acted out
+                characters, and helped shape the adventure.
+              </li>
+              <li>
+                <strong>Central Texas Storytelling Guild:</strong>
+                She served as an officer and contributed to the region's
+                storytelling community.
+              </li>
+              <li>
+                <strong>State festival recognition:</strong>
+                Karen was featured as one of the Rising Stars at a Texas
+                storytelling festival.
+              </li>
+              <li>
+                <strong>Royal Family Kids' Camp:</strong>
+                For nine years, she served as resident storyteller at a camp
+                for foster children.
+              </li>
+            </ul>
+
+            <p class="bio-emphasis">
+              Publishing books was a natural continuation of a life devoted
+              to the power of stories.
+            </p>
+          </div>
+        </article>
+
+        <article class="bio-entry">
+          <div class="bio-star" aria-hidden="true">★</div>
           <div>
             <h2>Life in the Mountains</h2>
             <p>
@@ -132,11 +185,33 @@
               to a life still deeply rooted in Texas.
             </p>
           </div>
-        </div>
+        </article>
+
+        <section class="still-changing" aria-labelledby="still-changing-title">
+          <div>
+            <h2 id="still-changing-title">Still Changing</h2>
+            <p class="still-changing__intro">
+              In her poem <em>Autumn</em>, Karen reflects on beauty, aging,
+              and the passage from one season of life to the next.
+            </p>
+          </div>
+
+          <blockquote>
+            <p>
+              “I, too, am changing,<br />
+              passing from one season<br />
+              of my life to the next.”
+            </p>
+          </blockquote>
+
+          <a class="text-link" href="../writing/">
+            Read the complete poem on the Writing page
+          </a>
+        </section>
 
         <p class="bio-closing">
           Whether writing fiction or memoir, Karen remains drawn to the
-          stories people carry with them — the memories, places, and moments
+          stories people carry with them—the memories, places, and moments
           that stay long after the page is turned.
         </p>
 
@@ -148,103 +223,95 @@
           <h2>Why I Write</h2>
           <blockquote>
             <p>
-              "I've always believed stories help us understand one another.
-              Some stories entertain. Some preserve memories. Some help us
-              make sense of where we've been. Whether I'm writing about
-              Austin in the 1960s or sharing memories from my own life,
-              I'm really exploring the people, places, and moments that
-              stay with us long after the page is turned."
+              Karen's personal reflection on why she writes will appear here.
             </p>
           </blockquote>
         </section>
 
-        <section class="quick-facts">
-          <h2>Quick Facts</h2>
+        <section class="storytelling-memories" aria-labelledby="storytelling-memories-title">
+          <h2 id="storytelling-memories-title">Storytelling Memories</h2>
 
-          <div class="fact-group">
-            <h3>Roots</h3>
-            <ul>
-              <li>Raised in West Texas</li>
-              <li>University of Texas student in the 1960s</li>
-              <li>Longtime Austin resident</li>
-              <li>Lifelong reader</li>
-            </ul>
-          </div>
+          <figure class="archive-card">
+            <a
+              href="../Assets/Umlauf_Sculpture_Garden_newpaper_article.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="../Assets/Umlauf_Storytelling_Headline.jpg"
+                alt="Newspaper clipping about Karen Hodges leading storytime at the Umlauf Sculpture Garden"
+              />
+            </a>
+            <figcaption>
+              <strong>Storytime at Umlauf Sculpture Garden</strong>
+              Karen led young children through stories, songs, instruments,
+              movement, and an art activity.
+            </figcaption>
+            <a
+              class="text-link"
+              href="../Assets/Umlauf_Sculpture_Garden_newspaper_article.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              View the full clipping
+            </a>
+          </figure>
 
-          <div class="fact-group">
-            <h3>Career</h3>
-            <ul>
-              <li>School librarian</li>
-              <li>Educator</li>
-              <li>Story collector</li>
-              <li>Author</li>
-            </ul>
-          </div>
-
-          <div class="fact-group">
-            <h3>Today</h3>
-            <ul>
-              <li>Lives in North Carolina</li>
-              <li>Writer and speaker</li>
-              <li>Nature enthusiast</li>
-              <li>Grandmother</li>
-            </ul>
-          </div>
+          <figure class="archive-card">
+            <img
+              src="../Assets/Storytelling_Thank_You_1.jpg"
+              alt="A child's handwritten thank-you note and drawing for Karen's school storytelling visit"
+            />
+            <figcaption>
+              <strong>A thank-you from a storytime friend</strong>
+              One child's drawing remembers a favorite character and the
+              participatory fun of Karen's visit.
+            </figcaption>
+          </figure>
         </section>
 
       </aside>
 
     </section>
 
-    <!-- STORIES THAT STAY -->
-    <section class="stories-stay">
-      <h2>Stories That Stay</h2>
-      <p>
-        Karen's books may take different forms — a historical mystery set
-        in 1960s Austin and a warm memoir about family, faith, aging, and
-        gratitude — but both grow from the same belief: stories help us
-        remember what matters.
-      </p>
-      <p>
-        After years spent helping students find meaningful books, Karen now
-        writes stories of her own, preserving memories from history, family,
-        and everyday life.
-      </p>
-      <p class="signature-quote">Facts tell, but stories stay.</p>
-    </section>
-
-    <!-- TIMELINE -->
+    <!-- UPDATED: six-part timeline -->
     <section class="timeline">
       <h2>A Life in Stories</h2>
 
-      <div class="timeline-grid">
+      <div class="timeline-grid timeline-grid--six">
 
         <article class="timeline-item">
-          <div class="timeline-icon">✶</div>
+          <div class="timeline-icon" aria-hidden="true">✶</div>
           <h3>West Texas</h3>
           <p>Growing up beneath big skies, surrounded by family stories.</p>
         </article>
 
         <article class="timeline-item">
-          <div class="timeline-icon">⌂</div>
+          <div class="timeline-icon" aria-hidden="true">⌂</div>
           <h3>University of Texas</h3>
           <p>Student during a defining chapter of Austin history.</p>
         </article>
 
         <article class="timeline-item">
-          <div class="timeline-icon">▤</div>
+          <div class="timeline-icon" aria-hidden="true">❝</div>
+          <h3>Storyteller</h3>
+          <p>Sharing participatory stories in schools, camps, and community spaces.</p>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-icon" aria-hidden="true">▤</div>
           <h3>School Librarian</h3>
           <p>A career helping young readers discover books.</p>
         </article>
 
         <article class="timeline-item">
-          <div class="timeline-icon">✎</div>
+          <div class="timeline-icon" aria-hidden="true">✎</div>
           <h3>Author</h3>
           <p>Writing fiction and memoir rooted in memory and place.</p>
         </article>
 
         <article class="timeline-item">
-          <div class="timeline-icon">△</div>
+          <div class="timeline-icon" aria-hidden="true">△</div>
           <h3>North Carolina Mountains</h3>
           <p>Continuing to write, reflect, and tell stories.</p>
         </article>
@@ -256,25 +323,36 @@
     <section class="photo-strip">
       <h2>A Few Photos Along the Way</h2>
 
-      <div class="photo-grid">
+      <div class="photo-grid photo-grid--five">
 
         <figure>
-          <img src="../Assets/Karen_as_a_Toddler_around_3.jpg" alt="Karen Hodges as a child in Texas" />
+          <img
+            src="../Assets/Karen_as_a_Toddler_around_3.jpg"
+            alt="Karen Hodges as a child in Texas"
+          />
           <figcaption>West Texas Childhood</figcaption>
         </figure>
 
         <figure>
-          <img src="../Assets/Karens_Portrat_around_16_scanned_no_frame.JPG" alt="Karen Hodges during her Austin years" />
+          <img
+            src="../Assets/Karens_Portrat_around_16_scanned_no_frame.JPG"
+            alt="Karen Hodges during her Austin years"
+          />
           <figcaption>Austin in the 1960s</figcaption>
         </figure>
 
         <figure>
-          <img src="images/karen-library.jpg" alt="Karen Hodges in a school library" />
+          <img
+            src="../Assets/karen-storytelling-with-children.jpg"
+            alt="Karen Hodges working among books in a school library"
+          />
           <figcaption>A Life Among Books</figcaption>
         </figure>
-
         <figure>
-          <img src="../Assets/Steamboat_07_Gondola_Trail_Karen_2756.JPG" alt="Karen Hodges in the North Carolina mountains" />
+          <img
+            src="../Assets/Steamboat_07_Gondola_Trail_Karen_2756.JPG"
+            alt="Karen Hodges in the North Carolina mountains"
+          />
           <figcaption>Home in the Mountains</figcaption>
         </figure>
 
@@ -284,10 +362,10 @@
     <!-- CTA -->
     <section class="bio-cta">
       <p>
-        I've always loved a good story — whether it's found in a library,
+        I've always loved a good story—whether it's found in a library,
         shared across a kitchen table, or discovered along a mountain trail.
       </p>
-      <a href="../books.html" class="btn btn-rust">Explore My Books</a>
+      <a href="../books/" class="btn btn-rust">Explore My Books</a>
     </section>
 
   </main>
@@ -295,11 +373,12 @@
   <footer class="site-footer">
     <p>★ 2026 Karen Hodges · All Rights Reserved</p>
     <div class="footer-links">
-      <a href="#" aria-label="Facebook">Facebook</a>
-      <a href="#" aria-label="Instagram">Instagram</a>
-      <a href="mailto:hello@example.com" aria-label="Email Karen">Email</a>
+      <a href="#" aria-label="Karen Hodges on Facebook">Facebook</a>
+      <a href="#" aria-label="Karen Hodges on Instagram">Instagram</a>
+      <a href="mailto:hello@example.com" aria-label="Email Karen Hodges">Email</a>
     </div>
   </footer>
 
+  <script src="../script.js"></script>
 </body>
 </html>
