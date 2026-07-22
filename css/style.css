@@ -1207,7 +1207,6 @@ a {
 .site-header__inner {
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 2rem;
   padding: 1rem 5%;
@@ -1218,6 +1217,10 @@ a {
   flex-direction: column;
   color: inherit;
   text-decoration: none;
+}
+
+.writing-page .primary-nav {
+  margin-left: auto;
 }
 
 .site-brand__name {
@@ -1264,8 +1267,10 @@ a {
 .site-mark {
   display: grid;
   place-items: center;
+  flex: 0 0 auto;
   width: 48px;
   height: 48px;
+  margin-left: 1rem;
   color: var(--rust);
   font-size: 1.8rem;
 }
