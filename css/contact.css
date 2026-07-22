@@ -12,8 +12,17 @@
 }
 
 .contact-page .site-header {
-  display: block;
   padding: 0;
+}
+
+.contact-page .site-header__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-page .primary-nav {
+  margin-left: auto;
 }
 
 .contact-page .site-mark {
