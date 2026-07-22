@@ -3291,3 +3291,678 @@ a {
     margin-bottom: 1rem;
   }
 }
+
+/* ========================================
+   BOOKMARK POEM — COMPACT HORIZONTAL STRIP
+   Overrides the earlier feature layout so the bookmark
+   supports the page rather than becoming a full section.
+======================================== */
+
+.bookmark-poem {
+  grid-template-columns: minmax(190px, 0.72fr) minmax(145px, 220px) minmax(280px, 1.45fr);
+  gap: 1.25rem 2rem;
+  align-items: center;
+  margin-top: 1.35rem;
+  margin-bottom: 1.75rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+  min-height: 0;
+}
+
+.bookmark-poem__heading {
+  grid-column: auto;
+  align-self: center;
+}
+
+.bookmark-poem__heading .eyebrow {
+  font-size: clamp(1.55rem, 2.2vw, 2rem);
+  line-height: 1.05;
+}
+
+.bookmark-poem__heading .section-star {
+  margin-top: 0.65rem;
+}
+
+.bookmark-poem > img {
+  grid-column: auto;
+  width: auto;
+  max-width: 100%;
+  height: 245px;
+  max-height: 245px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.bookmark-poem__copy {
+  grid-column: auto;
+  max-width: 560px;
+}
+
+.bookmark-poem__copy h2 {
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.65rem, 2.7vw, 2.35rem);
+}
+
+@media (max-width: 900px) {
+  .bookmark-poem {
+    grid-template-columns: minmax(150px, 210px) minmax(0, 1fr);
+  }
+
+  .bookmark-poem__heading {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .bookmark-poem > img {
+    height: 220px;
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bookmark-poem {
+    grid-template-columns: 115px minmax(0, 1fr);
+    gap: 1rem 1.15rem;
+    text-align: left;
+  }
+
+  .bookmark-poem__heading {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .bookmark-poem > img {
+    width: 115px;
+    height: auto;
+    max-height: 205px;
+  }
+
+  .bookmark-poem__copy {
+    margin: 0;
+  }
+
+  .bookmark-poem__copy h2 {
+    font-size: 1.55rem;
+  }
+}
+
+/* ========================================
+   BOOKMARK POEM — COMPACT INSET FEATURE
+   Keeps the bookmark as a small interstitial card rather
+   than a full-width page section.
+======================================== */
+
+.bookmark-poem.section-shell {
+  width: calc(100% - 10%);
+  max-width: 980px;
+  grid-template-columns: minmax(165px, 0.7fr) 105px minmax(260px, 1.5fr);
+  gap: 1rem 1.5rem;
+  margin: 1rem auto 1.35rem;
+  padding: 0.8rem 1.15rem;
+  background: rgba(255, 249, 236, 0.68);
+  border: 1px solid rgba(88, 65, 39, 0.18);
+  box-shadow: 0 7px 16px rgba(65, 45, 28, 0.06);
+}
+
+.bookmark-poem__heading .eyebrow {
+  font-size: clamp(1.3rem, 1.8vw, 1.65rem);
+}
+
+.bookmark-poem__heading .section-star {
+  margin-top: 0.35rem;
+}
+
+.bookmark-poem > img {
+  width: auto;
+  height: 150px;
+  max-height: 150px;
+}
+
+.bookmark-poem__copy h2 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
+  line-height: 1.05;
+}
+
+.bookmark-poem__copy .text-link {
+  font-size: 0.72rem;
+}
+
+@media (max-width: 900px) {
+  .bookmark-poem.section-shell {
+    width: calc(100% - 12%);
+    grid-template-columns: 95px minmax(0, 1fr);
+    gap: 0.8rem 1.2rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .bookmark-poem__heading {
+    grid-column: 2;
+    text-align: left;
+  }
+
+  .bookmark-poem > img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 145px;
+    max-height: 145px;
+  }
+
+  .bookmark-poem__copy {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .bookmark-poem.section-shell {
+    width: calc(100% - 12%);
+    grid-template-columns: 78px minmax(0, 1fr);
+    margin-top: 0.85rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem 0.85rem;
+  }
+
+  .bookmark-poem > img {
+    width: 78px;
+    height: auto;
+    max-height: 135px;
+  }
+
+  .bookmark-poem__heading .eyebrow {
+    font-size: 1.25rem;
+  }
+
+  .bookmark-poem__copy h2 {
+    font-size: 1.35rem;
+  }
+}
+
+
+/* ========================================
+   WRITING TOOLS ROW
+   Places the process panel at three-quarters width and
+   the bookmark feature as a companion card on the right.
+======================================== */
+
+.writing-tools {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(235px, 1fr);
+  gap: 1.4rem;
+  align-items: stretch;
+  padding-top: 1.35rem;
+  padding-bottom: 1.75rem;
+}
+
+/* Neutralize the earlier standalone spacing rules. */
+.writing-tools .writing-process,
+.writing-tools .bookmark-poem {
+  width: auto;
+  max-width: none;
+  margin: 0;
+}
+
+.writing-tools .writing-process {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: minmax(170px, 0.72fr) minmax(0, 3fr);
+  gap: 1.35rem;
+  padding: 1.4rem 1.5rem;
+}
+
+.writing-tools .writing-process__intro h2 {
+  font-size: clamp(1.65rem, 2.2vw, 2.1rem);
+}
+
+.writing-tools .writing-process__intro p {
+  font-size: 0.95rem;
+}
+
+.writing-tools .writing-process__steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem 0.6rem;
+  align-content: center;
+}
+
+.writing-tools .writing-process__steps li {
+  padding: 0 0.35rem;
+}
+
+.writing-tools .writing-process__steps li::after {
+  display: none;
+}
+
+.writing-tools .process-icon {
+  width: 52px;
+  height: 52px;
+  font-size: 1.4rem;
+}
+
+.writing-tools .writing-process__steps p {
+  font-size: 0.76rem;
+}
+
+.writing-tools .bookmark-poem {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 0;
+  padding: 1.1rem 1rem;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255, 249, 236, 0.88), rgba(255, 249, 236, 0.88)),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: cover;
+  border: 1px solid rgba(88, 65, 39, 0.18);
+  box-shadow: 0 7px 16px rgba(65, 45, 28, 0.06);
+}
+
+.writing-tools .bookmark-poem__heading {
+  order: 1;
+}
+
+.writing-tools .bookmark-poem__heading .eyebrow {
+  font-size: clamp(1.2rem, 1.55vw, 1.5rem);
+  line-height: 1.05;
+}
+
+.writing-tools .bookmark-poem__heading .section-star {
+  margin-top: 0.25rem;
+}
+
+.writing-tools .bookmark-poem > img {
+  order: 2;
+  width: auto;
+  height: 145px;
+  max-height: 145px;
+  margin: 0;
+  object-fit: contain;
+}
+
+.writing-tools .bookmark-poem__copy {
+  order: 3;
+  max-width: 230px;
+  margin: 0;
+}
+
+.writing-tools .bookmark-poem__copy h2 {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.25rem, 1.65vw, 1.55rem);
+  line-height: 1.08;
+}
+
+.writing-tools .bookmark-poem__copy .text-link {
+  font-size: 0.68rem;
+}
+
+@media (max-width: 1050px) {
+  .writing-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-tools .writing-process,
+  .writing-tools .bookmark-poem {
+    grid-column: 1;
+  }
+
+  .writing-tools .bookmark-poem {
+    display: grid;
+    grid-template-columns: 105px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    text-align: left;
+  }
+
+  .writing-tools .bookmark-poem > img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 150px;
+    margin: auto;
+  }
+
+  .writing-tools .bookmark-poem__heading,
+  .writing-tools .bookmark-poem__copy {
+    grid-column: 2;
+    max-width: none;
+    text-align: left;
+  }
+}
+
+@media (max-width: 700px) {
+  .writing-tools {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .writing-tools .writing-process {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-tools .writing-process__intro {
+    text-align: center;
+  }
+
+  .writing-tools .writing-process__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .writing-tools .bookmark-poem {
+    grid-template-columns: 76px minmax(0, 1fr);
+    padding: 0.85rem;
+  }
+
+  .writing-tools .bookmark-poem > img {
+    height: 125px;
+  }
+
+  .writing-tools .writing-process__steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========================================
+   WRITING TOOLS ALIGNMENT CORRECTION
+   Locks both companion panels into the same row,
+   with the process panel left and bookmark right.
+======================================== */
+
+.writing-tools {
+  grid-template-areas: "process bookmark";
+  grid-template-columns: minmax(0, 3fr) minmax(245px, 1fr);
+  align-items: stretch;
+}
+
+.writing-tools .writing-process {
+  grid-area: process;
+  grid-column: auto;
+  grid-row: 1;
+  height: 100%;
+}
+
+.writing-tools .bookmark-poem {
+  grid-area: bookmark;
+  grid-column: auto;
+  grid-row: 1;
+  height: 100%;
+  align-self: stretch;
+}
+
+@media (max-width: 1050px) {
+  .writing-tools {
+    grid-template-areas:
+      "process"
+      "bookmark";
+    grid-template-columns: 1fr;
+  }
+
+  .writing-tools .writing-process,
+  .writing-tools .bookmark-poem {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+/* ========================================
+   WRITING TOOLS — FINAL REFINEMENT
+   Shared companion-card treatment, clearer hierarchy,
+   compact spacing, and a six-step desktop sequence.
+======================================== */
+
+/* Keep the paired feature connected to the sections around it. */
+.writing-tools {
+  grid-template-columns: minmax(0, 3fr) minmax(240px, 1fr);
+  gap: 1.25rem;
+  align-items: stretch;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Give both panels the same visual frame. */
+.writing-tools .writing-process,
+.writing-tools .bookmark-poem {
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  border: 1px solid rgba(88, 65, 39, 0.2);
+  background:
+    linear-gradient(rgba(239, 224, 196, 0.92), rgba(239, 224, 196, 0.92)),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 18px rgba(65, 45, 28, 0.07);
+}
+
+/* Process panel remains dominant, but is less tall. */
+.writing-tools .writing-process {
+  display: grid;
+  grid-template-columns: minmax(165px, 0.72fr) minmax(0, 3.4fr);
+  gap: 1.15rem;
+  align-items: center;
+  padding: 1.25rem 1.35rem;
+}
+
+.writing-tools .writing-process__intro {
+  align-self: center;
+}
+
+.writing-tools .writing-process__intro h2 {
+  max-width: 190px;
+  margin: 0;
+  font-size: clamp(1.75rem, 2.35vw, 2.25rem);
+  line-height: 0.98;
+}
+
+.writing-tools .writing-process__intro h2 span {
+  display: block;
+}
+
+.writing-tools .writing-process__intro .section-star {
+  margin-top: 0.45rem;
+}
+
+.writing-tools .writing-process__intro p {
+  max-width: 220px;
+  margin: 0.65rem 0 0;
+  font-size: 0.91rem;
+  line-height: 1.45;
+}
+
+/* One clear six-stage sequence at desktop width. */
+.writing-tools .writing-process__steps {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0;
+  align-items: start;
+}
+
+.writing-tools .writing-process__steps li {
+  position: relative;
+  padding: 0 0.35rem;
+}
+
+.writing-tools .writing-process__steps li:not(:last-child)::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 72%;
+  width: 56%;
+  border-top: 1px dotted rgba(168, 77, 44, 0.48);
+}
+
+.writing-tools .process-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.55rem;
+  font-size: 1.3rem;
+}
+
+.writing-tools .writing-process__steps h3 {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.writing-tools .writing-process__steps p {
+  margin-top: 0.35rem;
+  font-size: 0.71rem;
+  line-height: 1.32;
+}
+
+/* The bookmark acts as a quiet literary sidebar. */
+.writing-tools .bookmark-poem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 1.05rem 0.95rem;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255, 249, 236, 0.78), rgba(255, 249, 236, 0.78)),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.writing-tools .bookmark-poem__heading .eyebrow {
+  font-size: clamp(1.05rem, 1.3vw, 1.28rem);
+  line-height: 1.05;
+}
+
+.writing-tools .bookmark-poem__heading .section-star {
+  margin-top: 0.15rem;
+  font-size: 0.72rem;
+}
+
+.writing-tools .bookmark-poem > img {
+  width: auto;
+  height: 132px;
+  max-height: 132px;
+  margin: 0.05rem auto;
+  object-fit: contain;
+}
+
+.writing-tools .bookmark-poem__copy {
+  max-width: 210px;
+}
+
+.writing-tools .bookmark-poem__copy h2 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.12rem, 1.45vw, 1.4rem);
+  line-height: 1.08;
+}
+
+.writing-tools .bookmark-poem__copy .text-link {
+  font-size: 0.65rem;
+  letter-spacing: 0.07em;
+}
+
+/* Medium desktop/tablet: preserve the side-by-side cards while
+   allowing the process to become two rows of three. */
+@media (max-width: 1180px) and (min-width: 901px) {
+  .writing-tools {
+    grid-template-columns: minmax(0, 2.55fr) minmax(225px, 0.95fr);
+  }
+
+  .writing-tools .writing-process {
+    grid-template-columns: minmax(155px, 0.75fr) minmax(0, 2.6fr);
+  }
+
+  .writing-tools .writing-process__steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem 0.4rem;
+  }
+
+  .writing-tools .writing-process__steps li::after {
+    display: none;
+  }
+}
+
+/* Stack only when the viewport genuinely becomes too narrow. */
+@media (max-width: 900px) {
+  .writing-tools {
+    grid-template-areas:
+      "process"
+      "bookmark";
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .writing-tools .writing-process {
+    grid-area: process;
+    grid-template-columns: minmax(155px, 0.65fr) minmax(0, 2.35fr);
+  }
+
+  .writing-tools .writing-process__steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem 0.5rem;
+  }
+
+  .writing-tools .writing-process__steps li::after {
+    display: none;
+  }
+
+  .writing-tools .bookmark-poem {
+    grid-area: bookmark;
+    display: grid;
+    grid-template-columns: 95px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    gap: 0.3rem 1rem;
+    text-align: left;
+  }
+
+  .writing-tools .bookmark-poem > img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 135px;
+  }
+
+  .writing-tools .bookmark-poem__heading,
+  .writing-tools .bookmark-poem__copy {
+    grid-column: 2;
+    max-width: none;
+    text-align: left;
+  }
+}
+
+@media (max-width: 650px) {
+  .writing-tools {
+    padding-top: 0.8rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .writing-tools .writing-process {
+    grid-template-columns: 1fr;
+    padding: 1.15rem;
+  }
+
+  .writing-tools .writing-process__intro,
+  .writing-tools .writing-process__intro h2,
+  .writing-tools .writing-process__intro p {
+    max-width: none;
+    text-align: center;
+  }
+
+  .writing-tools .writing-process__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 430px) {
+  .writing-tools .writing-process__steps {
+    grid-template-columns: 1fr;
+  }
+
+  .writing-tools .bookmark-poem {
+    grid-template-columns: 76px minmax(0, 1fr);
+    padding: 0.8rem;
+  }
+
+  .writing-tools .bookmark-poem > img {
+    height: 118px;
+  }
+}
