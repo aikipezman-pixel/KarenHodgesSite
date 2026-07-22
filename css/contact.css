@@ -1,0 +1,649 @@
+/* ========================================
+   CONTACT PAGE
+   Add as /css/contact.css and load after
+   the shared /css/style.css stylesheet.
+======================================== */
+
+.contact-page {
+  background:
+    linear-gradient(rgba(243, 231, 210, 0.96), rgba(243, 231, 210, 0.96)),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: auto, 900px auto;
+}
+
+.contact-page .site-header {
+  display: block;
+  padding: 0;
+}
+
+.contact-page .site-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.18rem;
+}
+
+.site-mark__mountain {
+  margin-top: 0.28rem;
+  color: var(--green);
+  font-size: 1.35rem;
+}
+
+.contact-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.72fr);
+  align-items: center;
+  min-height: 430px;
+  padding: 4rem 5%;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(243, 231, 210, 0.99) 0%,
+      rgba(243, 231, 210, 0.9) 54%,
+      rgba(198, 190, 162, 0.55) 100%
+    ),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 54px;
+  opacity: 0.18;
+  background:
+    linear-gradient(150deg, transparent 62%, var(--green) 63% 66%, transparent 67%) 0 100% / 150px 54px repeat-x;
+  pointer-events: none;
+}
+
+.contact-hero__copy {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.contact-eyebrow {
+  margin: 0 0 0.5rem;
+  color: var(--rust);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-hero h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.4rem, 7vw, 6.4rem);
+  line-height: 0.92;
+  color: var(--blue);
+}
+
+.contact-ornament {
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+  align-items: center;
+  gap: 0.8rem;
+  width: max-content;
+  margin: 1.35rem 0;
+  color: var(--rust);
+}
+
+.contact-ornament span {
+  height: 1px;
+  background: var(--rust);
+}
+
+.contact-ornament b {
+  font-size: 0.9rem;
+}
+
+.contact-hero__intro {
+  max-width: 650px;
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  line-height: 1.45;
+}
+
+.contact-handwritten {
+  margin: 1.4rem 0 0;
+  font-family: "Yellowtail", cursive;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: var(--rust);
+}
+
+.contact-hero__art {
+  position: relative;
+  z-index: 1;
+  min-height: 300px;
+  display: grid;
+  place-items: center;
+}
+
+.postcard {
+  position: relative;
+  width: min(100%, 420px);
+  min-height: 250px;
+  padding: 2.2rem 2rem;
+  background:
+    linear-gradient(rgba(248, 239, 223, 0.94), rgba(248, 239, 223, 0.94)),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 30px,
+      rgba(88, 65, 39, 0.08) 31px 32px
+    );
+  border: 1px solid rgba(88, 65, 39, 0.3);
+  box-shadow: 0 18px 34px rgba(65, 45, 28, 0.18);
+  transform: rotate(2deg);
+}
+
+.postcard::before {
+  content: "";
+  position: absolute;
+  top: 1.4rem;
+  bottom: 1.4rem;
+  left: 50%;
+  border-left: 1px dotted rgba(88, 65, 39, 0.4);
+}
+
+.postcard__stamp {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.3rem;
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 72px;
+  color: var(--cream);
+  background: var(--rust);
+  border: 5px double rgba(243, 231, 210, 0.75);
+  font-size: 1.4rem;
+}
+
+.postcard p {
+  width: 45%;
+  margin: 0;
+  padding-top: 2rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--blue);
+}
+
+.postcard__lines {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 38%;
+}
+
+.postcard__lines span {
+  display: block;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(88, 65, 39, 0.36);
+}
+
+.mountain-line {
+  position: absolute;
+  width: min(110%, 520px);
+  height: 100px;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.22;
+  background:
+    linear-gradient(145deg, transparent 49%, var(--green) 50% 53%, transparent 54%) 0 100% / 170px 100px repeat-x;
+}
+
+.contact-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(440px, 1.18fr);
+  gap: clamp(2.5rem, 6vw, 6rem);
+  padding: 5rem 5%;
+  background: rgba(255, 249, 236, 0.68);
+}
+
+.contact-details {
+  align-self: start;
+}
+
+.contact-details > h2,
+.contact-form-panel h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  color: var(--blue);
+}
+
+.contact-details > h2 {
+  font-size: clamp(2.6rem, 4.5vw, 4rem);
+  line-height: 1;
+}
+
+.contact-details > p:not(.contact-eyebrow) {
+  max-width: 650px;
+  font-size: 1.08rem;
+}
+
+.contact-rule {
+  width: 130px;
+  margin: 1.8rem 0 2rem;
+  border-top: 2px solid var(--rust);
+}
+
+.contact-rule::after {
+  content: "★";
+  display: block;
+  width: max-content;
+  margin: -0.85rem auto 0;
+  padding: 0 0.6rem;
+  color: var(--rust);
+  background: #f8efdf;
+  font-size: 0.85rem;
+}
+
+.contact-topic-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-topic {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px dotted rgba(88, 65, 39, 0.42);
+}
+
+.contact-topic__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: var(--cream);
+  background: var(--rust);
+  border-radius: 50%;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+}
+
+.contact-topic h3 {
+  margin: 0 0 0.2rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  color: var(--rust);
+}
+
+.contact-topic p {
+  margin: 0;
+}
+
+.response-note {
+  margin-top: 2rem;
+  padding: 1.15rem 1.2rem;
+  background: rgba(198, 190, 162, 0.38);
+  border-left: 4px solid var(--green);
+  font-size: 0.92rem;
+}
+
+.contact-form-panel {
+  position: relative;
+  padding: clamp(1.6rem, 4vw, 3rem);
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(239, 224, 196, 0.98) 0,
+      rgba(239, 224, 196, 0.98) 37px,
+      rgba(88, 65, 39, 0.08) 38px
+    );
+  border: 1px solid rgba(88, 65, 39, 0.24);
+  box-shadow: 0 18px 35px rgba(65, 45, 28, 0.13);
+}
+
+.contact-form-panel::before,
+.contact-form-panel::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  width: 34px;
+  height: 12px;
+  background: rgba(168, 77, 44, 0.35);
+}
+
+.contact-form-panel::before {
+  left: -8px;
+  transform: rotate(-35deg);
+}
+
+.contact-form-panel::after {
+  right: -8px;
+  transform: rotate(35deg);
+}
+
+.stationery-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(88, 65, 39, 0.3);
+}
+
+.stationery-heading > span {
+  color: var(--rust);
+  font-size: 2rem;
+}
+
+.stationery-heading p {
+  margin: 0 0 0.1rem;
+  color: var(--rust);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.stationery-heading h2 {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-field {
+  min-width: 0;
+}
+
+.form-field--full {
+  grid-column: 1 / -1;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.38rem;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 1px;
+  background: rgba(248, 239, 223, 0.92);
+  color: var(--ink);
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 190px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: 3px solid rgba(36, 56, 87, 0.2);
+  border-color: var(--blue);
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.3rem;
+}
+
+.form-actions p {
+  max-width: 300px;
+  margin: 0;
+  color: rgba(31, 36, 24, 0.74);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.contact-closing {
+  position: relative;
+  padding: 4rem 6% 4.5rem;
+  overflow: hidden;
+  text-align: center;
+  background:
+    linear-gradient(rgba(198, 190, 162, 0.8), rgba(198, 190, 162, 0.8)),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: cover;
+  border-top: 1px solid var(--line);
+}
+
+.contact-closing blockquote {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-style: italic;
+  line-height: 1.3;
+  color: var(--blue);
+}
+
+.contact-closing > p {
+  margin: 1.5rem 0 0;
+  color: var(--rust);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-closing__bluebonnets {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 1.4rem;
+  color: var(--blue);
+}
+
+.contact-closing__bluebonnets span:nth-child(2),
+.contact-closing__bluebonnets span:nth-child(4) {
+  transform: translateY(0.5rem);
+  color: var(--rust);
+}
+
+@media (max-width: 1024px) {
+  .contact-page .site-header__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact-page .site-brand {
+    width: 100%;
+    align-items: center;
+  }
+
+  .contact-page .site-mark {
+    display: none;
+  }
+
+  .contact-page .menu-toggle {
+    display: block;
+  }
+
+  .contact-page .primary-nav {
+    display: none;
+    width: 100%;
+  }
+
+  .contact-page .primary-nav.show {
+    display: block;
+  }
+
+  .contact-page .primary-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.75rem 0;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+  }
+
+  .contact-page .primary-nav li {
+    width: 100%;
+  }
+
+  .contact-page .primary-nav a {
+    display: block;
+    padding: 0.7rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .contact-hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .contact-hero__copy {
+    margin: 0 auto;
+  }
+
+  .contact-ornament {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-hero__intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-hero__art {
+    min-height: 260px;
+  }
+
+  .contact-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-details {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .contact-form-panel {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-page .site-header__inner,
+  .contact-hero,
+  .contact-shell {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .contact-hero {
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .contact-ornament {
+    grid-template-columns: 60px auto 60px;
+  }
+
+  .postcard {
+    min-height: 225px;
+    padding: 1.5rem;
+  }
+
+  .postcard__stamp {
+    width: 52px;
+    height: 62px;
+  }
+
+  .postcard p {
+    width: 43%;
+    font-size: 1.05rem;
+  }
+
+  .postcard__lines {
+    right: 1.4rem;
+    bottom: 1.5rem;
+  }
+
+  .contact-shell {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .contact-details {
+    text-align: center;
+  }
+
+  .contact-rule {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-topic {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contact-topic__icon {
+    margin: 0 auto;
+  }
+
+  .contact-form-panel {
+    padding: 1.4rem;
+  }
+
+  .stationery-heading {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field--full {
+    grid-column: auto;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .form-actions p {
+    max-width: none;
+  }
+
+  .contact-closing {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
