@@ -1,0 +1,260 @@
+/* ========================================
+   COMING SOON PAGE
+   Load after the shared /css/style.css file.
+======================================== */
+
+.coming-soon-page {
+  background:
+    linear-gradient(rgba(243, 231, 210, 0.96), rgba(243, 231, 210, 0.96)),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: auto, 900px auto;
+  color: var(--ink);
+}
+
+.coming-soon-page .site-header__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.coming-soon-page .primary-nav {
+  margin-left: auto;
+}
+
+.coming-soon {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  align-items: center;
+  gap: clamp(3rem, 7vw, 7rem);
+  min-height: 640px;
+  padding: 5rem 5%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(243, 231, 210, 0.99) 0%,
+      rgba(243, 231, 210, 0.94) 55%,
+      rgba(198, 190, 162, 0.52) 100%
+    ),
+    url("../Assets/blue-ridge-texture.png");
+  background-size: cover;
+  border-bottom: 1px solid var(--line);
+}
+
+.coming-soon__inner {
+  max-width: 760px;
+}
+
+.coming-soon__eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--rust);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.coming-soon h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(4rem, 8vw, 7rem);
+  line-height: 0.92;
+  color: var(--blue);
+}
+
+.coming-soon__rule {
+  display: grid;
+  grid-template-columns: 95px auto 95px;
+  align-items: center;
+  gap: 0.8rem;
+  width: max-content;
+  margin: 1.5rem 0;
+  color: var(--rust);
+}
+
+.coming-soon__rule span {
+  height: 1px;
+  background: var(--rust);
+}
+
+.coming-soon__rule b {
+  font-size: 0.9rem;
+}
+
+.coming-soon__intro {
+  max-width: 650px;
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  line-height: 1.5;
+}
+
+.coming-soon__script {
+  margin: 1.6rem 0 2rem;
+  font-family: "Yellowtail", cursive;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.15;
+  color: var(--rust);
+}
+
+.coming-soon__postcard {
+  position: relative;
+  width: min(100%, 430px);
+  min-height: 270px;
+  padding: 2.2rem;
+  background:
+    linear-gradient(rgba(248, 239, 223, 0.94), rgba(248, 239, 223, 0.94)),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 30px,
+      rgba(88, 65, 39, 0.08) 31px 32px
+    );
+  border: 1px solid rgba(88, 65, 39, 0.3);
+  box-shadow: 0 18px 34px rgba(65, 45, 28, 0.18);
+  transform: rotate(2deg);
+}
+
+.coming-soon__postcard::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: 50%;
+  border-left: 1px dotted rgba(88, 65, 39, 0.4);
+}
+
+.coming-soon__stamp {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.4rem;
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 72px;
+  color: var(--cream);
+  background: var(--rust);
+  border: 5px double rgba(243, 231, 210, 0.75);
+  font-size: 1.4rem;
+}
+
+.coming-soon__postcard p {
+  width: 44%;
+  margin: 0;
+  padding-top: 2rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--blue);
+}
+
+.coming-soon__lines {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 38%;
+}
+
+.coming-soon__lines span {
+  display: block;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(88, 65, 39, 0.36);
+}
+
+@media (max-width: 1024px) {
+  .coming-soon-page .site-header__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .coming-soon-page .site-brand {
+    width: 100%;
+    align-items: center;
+  }
+
+  .coming-soon-page .site-mark {
+    display: none;
+  }
+
+  .coming-soon-page .menu-toggle {
+    display: block;
+  }
+
+  .coming-soon-page .primary-nav {
+    display: none;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .coming-soon-page .primary-nav.show {
+    display: block;
+  }
+
+  .coming-soon-page .primary-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.75rem 0;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+  }
+
+  .coming-soon {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .coming-soon__inner {
+    margin: 0 auto;
+  }
+
+  .coming-soon__rule {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .coming-soon__postcard {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .coming-soon-page .site-header__inner,
+  .coming-soon {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .coming-soon {
+    min-height: auto;
+    padding-top: 3.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .coming-soon__rule {
+    grid-template-columns: 60px auto 60px;
+  }
+
+  .coming-soon__postcard {
+    min-height: 225px;
+    padding: 1.5rem;
+  }
+
+  .coming-soon__stamp {
+    width: 52px;
+    height: 62px;
+  }
+
+  .coming-soon__postcard p {
+    font-size: 1.08rem;
+  }
+
+  .coming-soon__lines {
+    right: 1.4rem;
+    bottom: 1.5rem;
+  }
+
+  .coming-soon .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
